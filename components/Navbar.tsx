@@ -1,7 +1,6 @@
 import {Stack, Text} from "@chakra-ui/react";
-import React from "react";
 
-const Navbar: React.FC = () => {
+export const Navbar: React.FC = () => {
   return (
     <Stack
       alignItems="center"
@@ -22,5 +21,3 @@ const Navbar: React.FC = () => {
     </Stack>
   );
 };
-
-export default Navbar;

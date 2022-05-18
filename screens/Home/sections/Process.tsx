@@ -1,7 +1,6 @@
-import React from "react";
 import {Stack, Flex, Spacer, Badge, Text, Grid, GridItem} from "@chakra-ui/react";
 
-const Process: React.FC = () => {
+export const Process: React.FC = () => {
   return (
     <Stack alignItems="flex-start" backgroundColor="primary.400" paddingX={24} paddingY={24}>
       <Badge
@@ -34,5 +33,3 @@ const Process: React.FC = () => {
     </Stack>
   );
 };
-
-export default Process;
