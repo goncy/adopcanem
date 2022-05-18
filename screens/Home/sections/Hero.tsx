@@ -19,7 +19,7 @@ const HeroSection: React.FC<Props> = () => {
         px={{base: 4, md: 8}}
         w={"full"}
       >
-        <Stack align={"flex-start"} marginLeft={157} maxWidth={489} spacing={6}>
+        <Stack align={"flex-start"} marginLeft={157} maxWidth={489} spacing={2}>
           <Text color={"white"} fontSize={{base: "xl", md: "l"}} fontWeight={700} lineHeight={1}>
             Adoptá tu mascota
           </Text>
@@ -31,12 +31,7 @@ const HeroSection: React.FC<Props> = () => {
           >
             Una mano por cuatro patas
           </Text>
-          <Text
-            color={"white"}
-            fontSize={{base: "2xl", md: "3xl"}}
-            fontWeight={700}
-            lineHeight={1.1}
-          >
+          <Text color={"white"} fontSize={{base: "lg", md: "xl"}} fontWeight={500} lineHeight={1.1}>
             Buscamos combatir el abandono y maltrato animal desde el respeto y el amor por los
             animales.
           </Text>

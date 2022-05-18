@@ -1,5 +1,5 @@
 import React from "react";
-import {Box, Container, Flex} from "@chakra-ui/react";
+import {Box, Container, Flex, VStack} from "@chakra-ui/react";
 
 import Navbar from "../navbar/Navbar";
 
@@ -15,7 +15,7 @@ const Layout: React.FC<LayoutProps> = (props) => {
   const {headProps, children} = props;
 
   return (
-    <Container maxWidth="container.xl" padding={0} role="main">
+    <VStack role="main" spacing={0}>
       {/* SEO Head */}
       <LayoutHead {...headProps} />
 
@@ -24,7 +24,7 @@ const Layout: React.FC<LayoutProps> = (props) => {
 
       {/* Main Content */}
       <Flex flexDir="column">{children}</Flex>
-    </Container>
+    </VStack>
   );
 };
 

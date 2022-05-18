@@ -1,4 +1,7 @@
-import {BadgeProps, extendTheme, theme} from "@chakra-ui/react";
+import {extendTheme, theme} from "@chakra-ui/react";
+
+import BadgeTheme from "./components/Badge.theme";
+import ButtonTheme from "./components/Button.theme";
 
 export default extendTheme({
   styles: {
@@ -25,19 +28,7 @@ export default extendTheme({
     black: "#363663",
   },
   components: {
-    Badge: {
-      variants: {
-        subtle: (props: BadgeProps) => {
-          return {
-            textTransform: "initial",
-            backgroundColor: `${props.colorScheme}.100`,
-            borderRadius: 9999,
-            paddingX: 6,
-            paddingY: 1,
-            color: `${props.colorScheme}.500`,
-          };
-        },
-      },
-    },
+    Button: ButtonTheme,
+    Badge: BadgeTheme,
   },
 });
