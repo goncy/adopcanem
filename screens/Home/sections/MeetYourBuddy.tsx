@@ -1,7 +1,6 @@
-import React from "react";
 import {Stack, Grid, GridItem, Text} from "@chakra-ui/react";
 
-const MeetYourBuddy: React.FC = () => {
+export const MeetYourBuddy: React.FC = () => {
   return (
     <Stack alignItems="center">
       <Text fontSize="5xl" fontWeight={700} textAlign="center">
@@ -20,5 +19,3 @@ const MeetYourBuddy: React.FC = () => {
     </Stack>
   );
 };
-
-export default MeetYourBuddy;
