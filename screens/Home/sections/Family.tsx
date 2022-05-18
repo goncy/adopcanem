@@ -1,7 +1,7 @@
-import {Box, Grid, Text, GridItem, Image} from "@chakra-ui/react";
+import {Box, Grid, Text, GridItem} from "@chakra-ui/react";
 import React from "react";
 
- const FamilySection: React.FC = () => {
+const FamilySection: React.FC = () => {
   return (
     <Grid
       backgroundColor="white"

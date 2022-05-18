@@ -1,5 +1,5 @@
 import React from "react";
-import { Stack, Button, Badge, Text, Box, Image, Flex } from "@chakra-ui/react";
+import {Stack, Button, Badge, Text, Image, Flex} from "@chakra-ui/react";
 // @ts-ignore
 import Carousel from "react-grid-carousel";
 
@@ -63,7 +63,7 @@ export const LifeStories: React.FC = () => {
             return (
               <Carousel.Item key={idx} width={50}>
                 {slide.image ? (
-                  <Image borderRadius={25} height="auto" src={slide.image} width="" />
+                  <Image alt="Perro" borderRadius={25} height="auto" src={slide.image} width="" />
                 ) : (
                   <Flex alignItems="center" height="100%">
                     <Stack direction="column">

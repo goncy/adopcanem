@@ -8,7 +8,7 @@ export default extendTheme({
     global: {
       body: {
         minHeight: "100vh",
-        backgroundColor: "gray.100",
+        backgroundColor: "white",
         color: "black",
         margin: 0,
       },
