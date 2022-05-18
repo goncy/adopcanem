@@ -4,6 +4,7 @@ import {ChakraProvider, Container} from "@chakra-ui/react";
 
 import Navbar from "../components/Navbar";
 import theme from "../theme";
+import ScrollToTop from "../components/ScrollToTop";
 
 function App({Component, pageProps}: AppProps) {
   return (
@@ -11,6 +12,7 @@ function App({Component, pageProps}: AppProps) {
       <Container backgroundColor="white" height="100%" maxWidth="container.xl">
         <Navbar />
         <Component {...pageProps} />
+        <ScrollToTop />
       </Container>
     </ChakraProvider>
   );
