@@ -1,5 +1,5 @@
 import React from "react";
-import {Box, Container, Flex, VStack} from "@chakra-ui/react";
+import {Flex, VStack} from "@chakra-ui/react";
 
 import Navbar from "../navbar/Navbar";
 
@@ -23,7 +23,9 @@ const Layout: React.FC<LayoutProps> = (props) => {
       <Navbar />
 
       {/* Main Content */}
-      <Flex flexDir="column">{children}</Flex>
+      <Flex flexDir="column" width="full">
+        {children}
+      </Flex>
     </VStack>
   );
 };

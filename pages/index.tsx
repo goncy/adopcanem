@@ -1,6 +1,6 @@
 import type {NextPage} from "next";
 
-import {Stack} from "@chakra-ui/react";
+import {Flex, Stack, VStack} from "@chakra-ui/react";
 
 import Hero from "../screens/Home/sections/Hero";
 import MeetYourBuddy from "../screens/Home/sections/MeetYourBuddy";
@@ -19,13 +19,13 @@ const Home: NextPage = () => {
         url: "https://adopcanem.com",
       }}
     >
-      <Stack>
+      <Flex flexDir="column" width="100%">
         <Hero />
         <MeetYourBuddy />
         <Process />
         <Transit />
         <History />
-      </Stack>
+      </Flex>
     </Layout>
   );
 };

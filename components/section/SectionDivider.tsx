@@ -10,15 +10,15 @@ const SectionDivider: React.FC<SectionDividerProps> = (props) => {
   const {backgroundColor = "white"} = props;
 
   return (
-    <Box bottom={0} left={0} overflow="hidden" position="absolute">
+    <Box bottom={0} left={0} overflow="hidden" position="absolute" width="100%">
       <svg
         fill={backgroundColor}
         preserveAspectRatio="none"
         style={{
-          position: "relative",
           display: "block",
-          height: "200px",
-          width: "calc(100% +1.5px)",
+          height: "100px",
+          position: "relative",
+          width: "100%",
           transform: "rotateZ(180deg)",
         }}
         viewBox="0 0 1200 120"
