@@ -25,6 +25,7 @@ const ProcessSectionCard: React.FC<ProcessSectionCardProps> = (props) => {
       backgroundSize="cover"
       backgroundPosition="center center"
       backgroundImage={thumbnail}
+
     >
       <Flex flexDir="column" width="100%" height="100%" padding={4}>
         <VStack
