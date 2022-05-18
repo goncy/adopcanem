@@ -1,6 +1,9 @@
 import React from "react";
-import {Stack, Flex, Button, Badge, Text, VStack, Box, HStack} from "@chakra-ui/react";
+import {Stack, Flex, Button, Badge, Text, VStack, Box, HStack, Grid, GridItem} from "@chakra-ui/react";
 import Section from "../../../components/section/Section";
+import Link from "next/link";
+import MeetBuddyCard from "../../../components/cards/MeetBuddyCard";
+import { getRandomPetPhoto } from "../../../lib/helperFunctions";
 
 const History: React.FC = () => {
   return (
@@ -29,7 +32,7 @@ const History: React.FC = () => {
         </VStack>
 
         {/* Timeline */}
-        <VStack spacing={2}>
+        <VStack width="full" spacing={2}>
           <Text fontSize="7xl" fontWeight={800} textColor="#363636">
             +3500
           </Text>
@@ -89,7 +92,8 @@ const History: React.FC = () => {
           </Box>
         </VStack>
 
-        <Stack direction={"row"} paddingTop={70}>
+        {/* Bottom */}
+        <VStack width="full" spacing={6} paddingTop={50}>
           <Button
             _hover={{ bg: "primary.500" }}
             bg={"red.400"}
@@ -99,11 +103,71 @@ const History: React.FC = () => {
           >
             Ir a mercadopago
           </Button>
-        </Stack>
+          <Link href="/">
+            <Text
+              fontSize="sm"
+              fontWeight={800}
+              cursor="pointer"
+              textColor="primary.500"
+            >
+              Prefiero hacer una transferencia
+            </Text>
+          </Link>
+        </VStack>
 
-        <Text fontSize="xs" fontWeight={800} textColor="primary.500">
-          Prefiero hacer una transferencia
-        </Text>
+        {/* Familia Grid */}
+        <HStack width="full" alignItems="center" justifyContent="center">
+          {/* Left Grid */}
+          <Grid
+            gap={4}
+            gridTemplateColumns="repeat(2, 1fr)"
+            gridTemplateRows="minmax(100px, auto)"
+            gridAutoFlow="dense"
+          >
+            {Array.from({ length: 4 }, (_, index) => (
+              <GridItem key={index}>
+                <MeetBuddyCard thumbnail={getRandomPetPhoto()} />
+              </GridItem>
+            ))}
+          </Grid>
+          {/* Center */}
+          <Box
+            borderRadius="2xl"
+            height="500px"
+            width="400px"
+            overflow="hidden"
+            position="relative"
+            backgroundSize="cover"
+            backgroundPosition="center center"
+            backgroundImage={
+              "https://images.unsplash.com/photo-1587463272361-565200f82b33?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687"
+            }
+          >
+            <Flex flexDir="column" width="100%" height="100%" padding={4}>
+              <VStack
+                alignItems="flex-start"
+                marginTop="auto"
+              >
+                <Text as="h2" fontSize="50px" fontWeight={900} color="white" textAlign="center">
+                  Abraza la familia
+                </Text>
+              </VStack>
+            </Flex>
+          </Box>
+          {/* Right Grid */}
+          <Grid
+            gap={4}
+            gridTemplateColumns="repeat(2, 1fr)"
+            gridTemplateRows="minmax(100px, auto)"
+            gridAutoFlow="dense"
+          >
+            {Array.from({ length: 4 }, (_, index) => (
+              <GridItem key={index}>
+                <MeetBuddyCard thumbnail={getRandomPetPhoto()} />
+              </GridItem>
+            ))}
+          </Grid>
+        </HStack>
       </VStack>
     </Section>
   );
