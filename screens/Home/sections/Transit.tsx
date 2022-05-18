@@ -1,8 +1,14 @@
 import {Badge, Button, Stack, Text} from "@chakra-ui/react";
+import Section from "../../../components/section/Section";
 
-export const Transit: React.FC = () => {
+ const Transit: React.FC = () => {
   return (
-    <Stack alignItems="flex-end" backgroundColor="gray.200" paddingX={24} paddingY={24}>
+    <Section
+      backgroundColor="gray.200"
+      backgroundIsImage
+      backgroundImage="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469"
+      hasDivider={false}
+    >
       <Stack
         alignItems="center"
         backgroundColor="white"
@@ -11,6 +17,7 @@ export const Transit: React.FC = () => {
         padding={12}
         spacing={6}
         textAlign="center"
+        marginLeft="auto"
       >
         <Badge colorScheme="primary" fontSize="lg" variant="subtle">
           Sumate a cambiar vidas
@@ -19,8 +26,8 @@ export const Transit: React.FC = () => {
           Hogar de tránsito
         </Text>
         <Text fontSize="2xl">
-          Si no podes adoptar pero tenes la posibilidad para albergar uno de nuestros rescatados
-          sumate como{" "}
+          Si no podes adoptar pero tenes la posibilidad para albergar uno de
+          nuestros rescatados sumate como{" "}
           <Text as="span" fontWeight={700}>
             hogar de tránsito
           </Text>
@@ -29,6 +36,7 @@ export const Transit: React.FC = () => {
           Completá el formulario
         </Button>
       </Stack>
-    </Stack>
+    </Section>
   );
 };
+export default Transit;
