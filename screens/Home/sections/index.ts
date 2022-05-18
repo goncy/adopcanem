@@ -7,3 +7,5 @@ export * from "./MeetYourBuddy";
 export * from "./Process";
 
 export * from "./Transit";
+
+export * from "./Footer";
