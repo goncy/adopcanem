@@ -26,14 +26,7 @@ const Process: React.FC = () => {
         </Flex>
       </Stack>
       <Grid gap={4} templateColumns="repeat(4, 1fr)" width="100%">
-        <GridItem
-          backgroundImage={`url(https://yourfamilydogpodcast.com/wp-content/uploads/sites/46/2021/08/seth-doyle-sXU6BeWoZqI-unsplash-scaled.jpg)`}
-          backgroundPosition="center center"
-          backgroundSize="cover"
-          h="380px"
-          marginBottom={12}
-          rounded="lg"
-        />
+        <GridItem bg="tomato" h="380px" marginBottom={12} rounded="lg" />
         <GridItem bg="tomato" h="380px" marginTop={12} rounded="lg" />
         <GridItem bg="tomato" h="380px" marginBottom={12} rounded="lg" />
         <GridItem bg="tomato" h="380px" marginTop={12} rounded="lg" />
