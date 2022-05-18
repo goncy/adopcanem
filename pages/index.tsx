@@ -7,7 +7,7 @@ import MeetYourBuddy from "../screens/Home/sections/MeetYourBuddy";
 import Process from "../screens/Home/sections/Process";
 import Transit from "../screens/Home/sections/Transit";
 import History from "../screens/Home/sections/History";
-import {Layout} from "../components/layout/Layout";
+import Layout from "../components/layout/Layout";
 
 const Home: NextPage = () => {
   return (
