@@ -4,6 +4,7 @@ import {Flex, VStack} from "@chakra-ui/react";
 import Navbar from "../navbar/Navbar";
 
 import LayoutHead, {LayoutHeadProps} from "./LayoutHead";
+import Footer from "../footer/Footer";
 
 interface LayoutProps {
   /* Optional head props for using in different pages */
@@ -25,6 +26,8 @@ const Layout: React.FC<LayoutProps> = (props) => {
       {/* Main Content */}
       <Flex flexDir="column" width="full">
         {children}
+        {/* Footer */}
+        <Footer />
       </Flex>
     </VStack>
   );
