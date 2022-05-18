@@ -43,7 +43,7 @@ const History: React.FC = () => {
         </Text>
       </Flex>
 
-      <Stack direction={"row"} paddindTop={200} paddingTop={70}>
+      <Stack direction={"row"} paddingTop={70}>
         <Button
           _hover={{bg: "primary.500"}}
           bg={"red.400"}
