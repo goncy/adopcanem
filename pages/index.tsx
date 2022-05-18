@@ -7,6 +7,7 @@ import MeetYourBuddy from "../screens/Home/sections/MeetYourBuddy";
 import Process from "../screens/Home/sections/Process";
 import Transit from "../screens/Home/sections/Transit";
 import History from "../screens/Home/sections/History";
+import Histories from "../screens/Home/sections/Histories";
 
 const Home: NextPage = () => {
   return (
@@ -16,6 +17,7 @@ const Home: NextPage = () => {
       <Process />
       <Transit />
       <History />
+      <Histories />
     </Stack>
   );
 };
