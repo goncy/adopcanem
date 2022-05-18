@@ -1,5 +1,6 @@
 import React from "react";
-import {Stack, Button, Badge, Text, Box, Image, Flex} from "@chakra-ui/react";
+import { Stack, Button, Badge, Text, Box, Image, Flex } from "@chakra-ui/react";
+// @ts-ignore
 import Carousel from "react-grid-carousel";
 
 export const LifeStories: React.FC = () => {
