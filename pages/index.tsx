@@ -7,16 +7,26 @@ import MeetYourBuddy from "../screens/Home/sections/MeetYourBuddy";
 import Process from "../screens/Home/sections/Process";
 import Transit from "../screens/Home/sections/Transit";
 import History from "../screens/Home/sections/History";
+import {Layout} from "../components/layout/Layout";
 
 const Home: NextPage = () => {
   return (
-    <Stack>
-      <Hero />
-      <MeetYourBuddy />
-      <Process />
-      <Transit />
-      <History />
-    </Stack>
+    <Layout
+      headProps={{
+        title: "Home | Adopcanem",
+        description:
+          "Adopcanem es una plataforma de adopción que te permite encontrar a tu nuevo compañero de vida.",
+        url: "https://adopcanem.com",
+      }}
+    >
+      <Stack>
+        <Hero />
+        <MeetYourBuddy />
+        <Process />
+        <Transit />
+        <History />
+      </Stack>
+    </Layout>
   );
 };
 
