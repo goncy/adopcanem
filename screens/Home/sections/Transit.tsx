@@ -1,7 +1,6 @@
-import React from "react";
 import {Badge, Button, Stack, Text} from "@chakra-ui/react";
 
-const TransitSection: React.FC = () => {
+export const Transit: React.FC = () => {
   return (
     <Stack alignItems="flex-end" backgroundColor="gray.200" paddingX={24} paddingY={24}>
       <Stack
@@ -33,5 +32,3 @@ const TransitSection: React.FC = () => {
     </Stack>
   );
 };
-
-export default TransitSection;

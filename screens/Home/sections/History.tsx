@@ -1,7 +1,6 @@
-import React from "react";
 import {Stack, Flex, Button, Badge, Text} from "@chakra-ui/react";
 
-const History: React.FC = () => {
+export const History: React.FC = () => {
   return (
     <Stack
       align="center"
@@ -62,5 +61,3 @@ const History: React.FC = () => {
     </Stack>
   );
 };
-
-export default History;
