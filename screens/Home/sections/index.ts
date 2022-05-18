@@ -11,3 +11,5 @@ export * from "./Transit";
 export * from "./Footer";
 
 export * from "./Family";
+
+export * from "./LifeStories";
