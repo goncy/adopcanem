@@ -2,6 +2,9 @@ import type {NextPage} from "next";
 
 import {Flex} from "@chakra-ui/react";
 
+import FamilySection from "screens/Home/sections/Family";
+import LifeStories from "screens/Home/sections/LifeStories";
+
 import Hero from "../screens/Home/sections/Hero";
 import MeetYourBuddy from "../screens/Home/sections/MeetYourBuddy";
 import Process from "../screens/Home/sections/Process";
@@ -25,6 +28,8 @@ const Home: NextPage = () => {
         <Process />
         <Transit />
         <History />
+        <FamilySection />
+        <LifeStories />
       </Flex>
     </Layout>
   );

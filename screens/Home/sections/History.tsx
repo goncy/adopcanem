@@ -1,21 +1,8 @@
 import React from "react";
-import {
-  Stack,
-  Flex,
-  Button,
-  Badge,
-  Text,
-  VStack,
-  Box,
-  HStack,
-  Grid,
-  GridItem,
-} from "@chakra-ui/react";
+import {Flex, Button, Badge, Text, VStack, Box, HStack} from "@chakra-ui/react";
 import Link from "next/link";
 
 import Section from "../../../components/section/Section";
-import MeetBuddyCard from "../../../components/cards/MeetBuddyCard";
-import {getRandomPetPhoto} from "../../../lib/helperFunctions";
 
 const History: React.FC = () => {
   return (
@@ -102,57 +89,6 @@ const History: React.FC = () => {
             </Text>
           </Link>
         </VStack>
-
-        {/* Familia Grid */}
-        <HStack alignItems="center" justifyContent="center" width="full">
-          {/* Left Grid */}
-          <Grid
-            gap={4}
-            gridAutoFlow="dense"
-            gridTemplateColumns="repeat(2, 1fr)"
-            gridTemplateRows="minmax(100px, auto)"
-          >
-            {Array.from({length: 4}, (_, index) => (
-              <GridItem key={index}>
-                <MeetBuddyCard thumbnail={getRandomPetPhoto()} />
-              </GridItem>
-            ))}
-          </Grid>
-          {/* Center */}
-          <Box
-            backgroundImage={
-              "https://images.unsplash.com/photo-1587463272361-565200f82b33?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687"
-            }
-            backgroundPosition="center center"
-            backgroundSize="cover"
-            borderRadius="2xl"
-            height="500px"
-            overflow="hidden"
-            position="relative"
-            width="400px"
-          >
-            <Flex flexDir="column" height="100%" padding={4} width="100%">
-              <VStack alignItems="flex-start" marginTop="auto">
-                <Text as="h2" color="white" fontSize="50px" fontWeight={900} textAlign="center">
-                  Abraza la familia
-                </Text>
-              </VStack>
-            </Flex>
-          </Box>
-          {/* Right Grid */}
-          <Grid
-            gap={4}
-            gridAutoFlow="dense"
-            gridTemplateColumns="repeat(2, 1fr)"
-            gridTemplateRows="minmax(100px, auto)"
-          >
-            {Array.from({length: 4}, (_, index) => (
-              <GridItem key={index}>
-                <MeetBuddyCard thumbnail={getRandomPetPhoto()} />
-              </GridItem>
-            ))}
-          </Grid>
-        </HStack>
       </VStack>
     </Section>
   );
