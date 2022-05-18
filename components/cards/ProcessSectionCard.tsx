@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Flex, Heading, Text, VStack } from "@chakra-ui/react";
+import {Box, Flex, Heading, Text, VStack} from "@chakra-ui/react";
 
 interface ProcessSectionCardProps {
   /** Number of the card, title. */
@@ -13,31 +13,26 @@ interface ProcessSectionCardProps {
 }
 
 const ProcessSectionCard: React.FC<ProcessSectionCardProps> = (props) => {
-  const { title, description, thumbnail, topOffset } = props;
+  const {title, description, thumbnail, topOffset} = props;
+
   return (
     <Box
+      backgroundImage={thumbnail}
+      backgroundPosition="center center"
+      backgroundSize="cover"
       borderRadius="2xl"
       height="400px"
-      width="300px"
-      top={topOffset}
       overflow="hidden"
       position="relative"
-      backgroundSize="cover"
-      backgroundPosition="center center"
-      backgroundImage={thumbnail}
-
+      top={topOffset}
+      width="300px"
     >
-      <Flex flexDir="column" width="100%" height="100%" padding={4}>
-        <VStack
-          alignItems="flex-start"
-          marginTop="auto"
-          textAlign="left"
-          paddingRight={8}
-        >
-          <Heading as="h2" fontSize="80px" fontWeight={900} color="white">
+      <Flex flexDir="column" height="100%" padding={4} width="100%">
+        <VStack alignItems="flex-start" marginTop="auto" paddingRight={8} textAlign="left">
+          <Heading as="h2" color="white" fontSize="80px" fontWeight={900}>
             {title}
           </Heading>
-          <Text fontSize="2xl" fontWeight={800} color="white">
+          <Text color="white" fontSize="2xl" fontWeight={800}>
             {description}
           </Text>
         </VStack>

@@ -2,9 +2,9 @@ import React from "react";
 import {Flex, VStack} from "@chakra-ui/react";
 
 import Navbar from "../navbar/Navbar";
+import Footer from "../footer/Footer";
 
 import LayoutHead, {LayoutHeadProps} from "./LayoutHead";
-import Footer from "../footer/Footer";
 
 interface LayoutProps {
   /* Optional head props for using in different pages */
