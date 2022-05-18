@@ -4,11 +4,12 @@ export default function Document() {
   return (
     <Html>
       <Head>
-        <link href="https://fonts.googleapis.com" rel="preconnect" />
-        <link href="https://fonts.gstatic.com" rel="preconnect" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap"
-          rel="stylesheet"
+          as="font"
+          crossOrigin="anonymous"
+          href="/fonts/raleway-subset.woff2"
+          rel="preload"
+          type="font/woff2"
         />
       </Head>
       <body>

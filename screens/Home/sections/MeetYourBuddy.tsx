@@ -1,9 +1,8 @@
-import React from "react";
 import {Stack, Grid, Heading, Box, Button} from "@chakra-ui/react";
 
 import {MeetColumn} from "../../../components/meet/MeetColumn";
 
-const MeetYourBuddy: React.FC = () => {
+export const MeetYourBuddy: React.FC = () => {
   return (
     <Stack position="relative" pt="32" px="4" textAlign="center">
       <Heading>
@@ -53,5 +52,3 @@ const MeetYourBuddy: React.FC = () => {
     </Stack>
   );
 };
-
-export default MeetYourBuddy;

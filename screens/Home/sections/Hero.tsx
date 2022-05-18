@@ -1,9 +1,8 @@
-import React from "react";
 import {Flex, Button, Text, Stack} from "@chakra-ui/react";
 
 interface Props {}
 
-const HeroSection: React.FC<Props> = () => {
+export const Hero: React.FC<Props> = () => {
   return (
     <Flex
       backgroundImage={
@@ -51,5 +50,3 @@ const HeroSection: React.FC<Props> = () => {
     </Flex>
   );
 };
-
-export default HeroSection;
