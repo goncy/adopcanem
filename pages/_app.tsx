@@ -5,6 +5,7 @@ import {ChakraProvider, Container} from "@chakra-ui/react";
 import {Fonts, Navbar, ScrollTopButton} from "components";
 
 import theme from "../theme";
+import ScrollToTop from "../components/ScrollToTop";
 
 function App({Component, pageProps}: AppProps) {
   return (
