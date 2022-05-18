@@ -38,16 +38,18 @@ const ScrollToTop: React.FC = ({...props}) => {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
+		function onScroll() {
       // show the button after scrolling down 400px or more
       if (window.pageYOffset > 400) {
         setShowButton(true);
       } else {
         setShowButton(false);
       }
-    });
+    }
 
-    return () => window.removeEventListener("scroll", () => {});
+    window.addEventListener("scroll", onScroll);
+
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   if (!showButton) return null;
