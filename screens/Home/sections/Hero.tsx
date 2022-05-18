@@ -1,5 +1,7 @@
 import {Flex, Button, Text, Stack} from "@chakra-ui/react";
 
+import {Wave} from "components/waves/Wave";
+
 interface Props {}
 
 export const Hero: React.FC<Props> = () => {
@@ -10,6 +12,7 @@ export const Hero: React.FC<Props> = () => {
       }
       backgroundPosition={"center center"}
       backgroundSize={"cover"}
+      position="relative"
       w={"full"}
     >
       <Stack
@@ -47,6 +50,7 @@ export const Hero: React.FC<Props> = () => {
           </Button>
         </Stack>
       </Stack>
+      <Wave bottom="0" position="absolute" w="100%" waveColor="#fff" />
     </Flex>
   );
 };

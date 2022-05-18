@@ -10,7 +10,7 @@ function App({Component, pageProps}: AppProps) {
   return (
     <ChakraProvider theme={theme}>
       <Fonts />
-      <Container backgroundColor="white" height="100%" maxWidth="container.xl">
+      <Container backgroundColor="white" height="100%" maxWidth="container.xl" px="0">
         <Navbar />
         <Component {...pageProps} />
       </Container>

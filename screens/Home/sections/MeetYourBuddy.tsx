@@ -4,7 +4,7 @@ import {MeetColumn} from "../../../components/meet/MeetColumn";
 
 export const MeetYourBuddy: React.FC = () => {
   return (
-    <Stack position="relative" pt="32" px="4" textAlign="center">
+    <Stack bgColor="white" position="relative" pt="32" px="4" textAlign="center">
       <Heading>
         <Box>Conocé a tu proxima</Box>
         <Box color="primary.500">mascota</Box>
