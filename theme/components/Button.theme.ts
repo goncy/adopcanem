@@ -2,7 +2,7 @@ import {ComponentStyleConfig} from "@chakra-ui/react";
 
 const ButtonTheme: ComponentStyleConfig = {
   baseStyle: {
-    borderRadius: 0,
+    borderRadius: "sm",
     fontWeight: 600,
   },
 };

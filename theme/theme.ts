@@ -12,6 +12,7 @@ export default extendTheme({
       body: {
         backgroundColor: "gray.100",
         color: "black",
+        margin: 0,
       },
     },
   },
