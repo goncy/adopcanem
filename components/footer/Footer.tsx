@@ -1,4 +1,5 @@
-import {Stack, Text} from "@chakra-ui/react";
+import {Link, Stack, Text} from "@chakra-ui/react";
+import {FiFacebook, FiLinkedin, FiInstagram} from "react-icons/fi";
 import React from "react";
 
 const Footer: React.FC = () => {
@@ -29,9 +30,15 @@ const Footer: React.FC = () => {
         <Text>Hacé tu donación</Text>
       </Stack>
       <Stack direction="row" gap="10px" justifyContent="end" width="200px">
-        <Text>IN</Text>
-        <Text>F</Text>
-        <Text>IG</Text>
+        <Link href="#">
+          <FiLinkedin size={24} />
+        </Link>
+        <Link isExternal href="https://www.facebook.com/Adopcanem">
+          <FiFacebook size={24} />
+        </Link>
+        <Link isExternal href="https://www.instagram.com/adopcanem/?hl=es-la">
+          <FiInstagram size={24} />
+        </Link>
       </Stack>
     </Stack>
   );
