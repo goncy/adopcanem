@@ -10,6 +10,8 @@ import MeetYourBuddy from "../screens/Home/sections/MeetYourBuddy";
 import Process from "../screens/Home/sections/Process";
 import Transit from "../screens/Home/sections/Transit";
 import History from "../screens/Home/sections/History";
+import Histories from "../screens/Home/sections/Histories";
+
 import Layout from "../components/layout/Layout";
 
 const Home: NextPage = () => {
@@ -28,6 +30,7 @@ const Home: NextPage = () => {
         <Process />
         <Transit />
         <History />
+        <Histories />
         <FamilySection />
         <LifeStories />
       </Flex>
