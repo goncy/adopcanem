@@ -1,11 +1,13 @@
-import {Stack, Grid, Heading, Box, Button, Container} from "@chakra-ui/react";
+import {Stack, Grid, Heading, Box, Button} from "@chakra-ui/react";
+
+import Section from "components/section/Section";
 
 import {MeetColumn} from "../../../components/meet/MeetColumn";
 
 export const MeetYourBuddy: React.FC = () => {
   return (
-    <Container maxWidth="container.xl">
-      <Stack position="relative" pt="32" px="4" textAlign="center">
+    <Section hasDivider backgroundColor="white" dividerColor="#F8F3E3">
+      <Stack position="relative" textAlign="center">
         <Heading fontSize="5xl">
           <Box>Conocé a tu proxima</Box>
           <Box color="primary.500">mascota</Box>
@@ -36,22 +38,11 @@ export const MeetYourBuddy: React.FC = () => {
               position="relative"
               w="full"
             />
-            <Button
-              _hover={{
-                bg: "primary.500",
-              }}
-              bg="primary.500"
-              borderRadius="sm"
-              color="white"
-              m="0"
-              position="relative"
-            >
-              Encontrá tu mascota
-            </Button>
+            <Button size="lg">Encontrá tu mascota</Button>
           </Stack>
         </Box>
       </Stack>
-    </Container>
+    </Section>
   );
 };
 

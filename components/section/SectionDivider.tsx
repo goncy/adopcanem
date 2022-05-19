@@ -1,5 +1,5 @@
-import {Box} from "@chakra-ui/react";
 import React from "react";
+import {Box} from "@chakra-ui/react";
 
 interface SectionDividerProps {
   /** Color to display in the divider, defaults to white. */
@@ -8,7 +8,7 @@ interface SectionDividerProps {
 
 const SectionDivider: React.FC<SectionDividerProps> = (props) => {
   const {backgroundColor = "white"} = props;
-  
+
   return (
     <Box bottom={0} left={0} overflow="hidden" position="absolute" width="100%">
       <svg

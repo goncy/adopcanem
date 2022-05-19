@@ -1,7 +1,5 @@
 import type {NextPage} from "next";
 
-import {Flex} from "@chakra-ui/react";
-
 import FamilySection from "screens/Home/sections/Family";
 import LifeStories from "screens/Home/sections/LifeStories";
 
@@ -22,15 +20,13 @@ const Home: NextPage = () => {
         url: "https://adopcanem.com",
       }}
     >
-      <Flex flexDir="column" width="100%">
-        <Hero />
-        <MeetYourBuddy />
-        <Process />
-        <Transit />
-        <History />
-        <FamilySection />
-        <LifeStories />
-      </Flex>
+      <Hero />
+      <MeetYourBuddy />
+      <Process />
+      <Transit />
+      <History />
+      <FamilySection />
+      <LifeStories />
     </Layout>
   );
 };

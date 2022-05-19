@@ -2,6 +2,7 @@ import {extendTheme, theme} from "@chakra-ui/react";
 
 import BadgeTheme from "./components/Badge.theme";
 import ButtonTheme from "./components/Button.theme";
+import TextTheme from "./components/Text.theme";
 
 export default extendTheme({
   styles: {
@@ -15,7 +16,7 @@ export default extendTheme({
     },
   },
   fonts: {
-    body: "Raleway, sans-serif",
+    body: "Raleway, system-ui, sans-serif",
   },
   colors: {
     primary: {
@@ -29,5 +30,6 @@ export default extendTheme({
   components: {
     Button: ButtonTheme,
     Badge: BadgeTheme,
+    Text: TextTheme,
   },
 });

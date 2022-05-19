@@ -2,6 +2,9 @@ import {Link, Stack, Text} from "@chakra-ui/react";
 import {FiFacebook, FiLinkedin, FiInstagram} from "react-icons/fi";
 import React from "react";
 
+import FooterLink from "./FooterLink";
+import FooterDivider from "./FooterDivider";
+
 const Footer: React.FC = () => {
   return (
     <Stack
@@ -10,9 +13,11 @@ const Footer: React.FC = () => {
       direction="row"
       height="350px"
       justifyContent="space-between"
+      mt={10}
       padding="20px 50px"
       paddingX={12}
     >
+      <FooterDivider />
       <Text fontSize="lg" fontWeight={700} width="200px">
         adopcanem - 2022
       </Text>
@@ -24,10 +29,10 @@ const Footer: React.FC = () => {
         spacing={7}
         textAlign="center"
       >
-        <Text>Encontrá tu mascota</Text>
-        <Text>Sobre nosotros</Text>
-        <Text>Contáctanos</Text>
-        <Text>Hacé tu donación</Text>
+        <FooterLink href="/">Encontrá tu mascota</FooterLink>
+        <FooterLink href="/">Sobre nosotros</FooterLink>
+        <FooterLink href="/">Contáctanos</FooterLink>
+        <FooterLink href="/">Hacé tu donación</FooterLink>
       </Stack>
       <Stack direction="row" gap="10px" justifyContent="end" width="200px">
         <Link href="#">

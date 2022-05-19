@@ -5,6 +5,15 @@ const ButtonTheme: ComponentStyleConfig = {
     borderRadius: "lg",
     fontWeight: 600,
   },
+  variants: {
+    solid: {
+      bg: "primary.500",
+      color: "white",
+      _hover: {
+        bg: "primary.600",
+      },
+    },
+  },
 };
 
 export default ButtonTheme;

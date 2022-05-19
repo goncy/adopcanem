@@ -23,7 +23,7 @@ const History: React.FC = () => {
           <Text fontSize="5xl" fontWeight={900} textColor="#363636">
             Nuestra historia
           </Text>
-          <Text fontSize="lg" fontWeight={600} maxWidth="750">
+          <Text maxWidth="750">
             Existen muchas formas de ser parte de este cambio, desde algún lugar podes hacerlo. Los
             aportes económicos nos ayudan a pagar controles, estudios, veterinarios, traslados y
             comprar alimento.
@@ -74,13 +74,7 @@ const History: React.FC = () => {
 
         {/* Bottom */}
         <VStack paddingTop={50} spacing={6} width="full">
-          <Button
-            _hover={{bg: "primary.500"}}
-            bg={"red.400"}
-            color={"white"}
-            paddingX={12}
-            size="lg"
-          >
+          <Button paddingX={12} size="lg">
             Ir a mercadopago
           </Button>
           <Link href="/">
