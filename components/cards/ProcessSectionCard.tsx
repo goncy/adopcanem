@@ -1,5 +1,5 @@
 import React from "react";
-import {Box, Flex, Heading, Text, VStack} from "@chakra-ui/react";
+import {Box, Flex, Heading, Text, VStack, useBreakpointValue} from "@chakra-ui/react";
 
 interface ProcessSectionCardProps {
   /** Number of the card, title. */
@@ -14,6 +14,7 @@ interface ProcessSectionCardProps {
 
 const ProcessSectionCard: React.FC<ProcessSectionCardProps> = (props) => {
   const {title, description, thumbnail, topOffset} = props;
+  const variant = useBreakpointValue({ md: '0', lg: topOffset })
 
   return (
     <Box
@@ -24,7 +25,7 @@ const ProcessSectionCard: React.FC<ProcessSectionCardProps> = (props) => {
       height="400px"
       overflow="hidden"
       position="relative"
-      top={topOffset}
+      top={variant}
       width="300px"
     >
       <Flex flexDir="column" height="100%" padding={4} width="100%">
