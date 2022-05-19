@@ -2,19 +2,20 @@ import React, {useEffect, useState, useCallback} from "react";
 import {Button, VisuallyHidden} from "@chakra-ui/react";
 
 import {ArrowUp} from "components/icons";
+import {SCROLL_BUTTON_POSITION} from "lib/constants";
 
 interface Props {
   limit: number;
-  right?: number;
-  bottom?: number;
+  right?: number | string | object;
+  bottom?: number | string | object;
   translateY?: string;
   accessibilityContent?: string;
 }
 
 const ScrollTopButton: React.FC<Props> = ({
   limit,
-  right = 20,
-  bottom = 20,
+  right = SCROLL_BUTTON_POSITION.RIGHT,
+  bottom = SCROLL_BUTTON_POSITION.BOTTOM,
   translateY = "30px",
   accessibilityContent = "Volver al inicio",
 }) => {
