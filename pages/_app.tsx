@@ -1,17 +1,13 @@
 import type {AppProps} from "next/app";
 
-import {ChakraProvider, Container} from "@chakra-ui/react";
+import {ChakraProvider} from "@chakra-ui/react";
 
-import Navbar from "../components/Navbar";
-import theme from "../theme";
+import theme from "../theme/theme";
 
 function App({Component, pageProps}: AppProps) {
   return (
     <ChakraProvider theme={theme}>
-      <Container backgroundColor="white" height="100%" maxWidth="container.xl">
-        <Navbar />
-        <Component {...pageProps} />
-      </Container>
+      <Component {...pageProps} />
     </ChakraProvider>
   );
 }

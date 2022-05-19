@@ -1,23 +1,57 @@
-import React from "react";
-import {Stack, Grid, GridItem, Text} from "@chakra-ui/react";
+import {Stack, Grid, Heading, Box, Button, Container} from "@chakra-ui/react";
 
-const MeetYourBuddy: React.FC = () => {
+import {MeetColumn} from "../../../components/meet/MeetColumn";
+
+export const MeetYourBuddy: React.FC = () => {
   return (
-    <Stack alignItems="center">
-      <Text fontSize="5xl" fontWeight={700} textAlign="center">
-        Conocé a tu próxima{" "}
-        <Text as="span" color="primary.500">
-          mascota
-        </Text>
-      </Text>
-      <Grid gap={4} templateColumns="repeat(auto-fill, minmax(200px, 1fr))" width="100%">
-        {Array.from({length: 18}, (_, index) => (
-          <GridItem key={index} bg="grey" h="10rem">
-            Image
-          </GridItem>
-        ))}
-      </Grid>
-    </Stack>
+    <Container maxWidth="container.xl">
+      <Stack position="relative" pt="32" px="4" textAlign="center">
+        <Heading fontSize="5xl">
+          <Box>Conocé a tu proxima</Box>
+          <Box color="primary.500">mascota</Box>
+        </Heading>
+        <Box position="relative" top="-32">
+          <Grid
+            gap="4"
+            gridTemplateColumns={["repeat(3,1fr)", "repeat(6,1fr)"]}
+            maxH={["500px", "inherit"]}
+            overflowY={["hidden"]}
+            pt="32"
+          >
+            <MeetColumn end={3} position={["0", "-100px"]} start={0} />
+            <MeetColumn end={6} position={["100px", "0"]} start={3} />
+            <MeetColumn end={9} position={["0", "100px"]} start={6} />
+            <MeetColumn end={12} position="150px" start={9} />
+            <MeetColumn end={15} position={["100px", "0"]} start={12} />
+            <MeetColumn end={18} position={["0", "-100px"]} start={15} />
+          </Grid>
+          <Stack align="center" bgColor="white">
+            <Box
+              boxShadow={[
+                "0px 0px 50px 60px  rgba(255,255,255,1)",
+                "0px -30px 100px 130px  rgba(255,255,255,1)",
+              ]}
+              h="0px"
+              mb="4"
+              position="relative"
+              w="full"
+            />
+            <Button
+              _hover={{
+                bg: "primary.500",
+              }}
+              bg="primary.500"
+              borderRadius="sm"
+              color="white"
+              m="0"
+              position="relative"
+            >
+              Encontrá tu mascota
+            </Button>
+          </Stack>
+        </Box>
+      </Stack>
+    </Container>
   );
 };
 
