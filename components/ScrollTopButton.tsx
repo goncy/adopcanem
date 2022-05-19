@@ -11,7 +11,7 @@ interface Props {
   accessibilityContent?: string;
 }
 
-export const ScrollTopButton: React.FC<Props> = ({
+const ScrollTopButton: React.FC<Props> = ({
   limit,
   right = 20,
   bottom = 20,
@@ -29,7 +29,10 @@ export const ScrollTopButton: React.FC<Props> = ({
   }, [limit, hasScrolled]);
 
   const handleScrollTop = useCallback((): void => {
-    window.scrollTo(0, 0);
+    window.scroll({
+      top: 0,
+      behavior: "smooth",
+    });
   }, []);
 
   useEffect(() => {
@@ -60,3 +63,5 @@ export const ScrollTopButton: React.FC<Props> = ({
     </Button>
   );
 };
+
+export default ScrollTopButton;
