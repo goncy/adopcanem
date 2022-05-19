@@ -39,63 +39,61 @@ export const LifeStories: React.FC = () => {
   ];
 
   return (
-    <Container maxWidth="container.xl">
-      <Stack align="center" direction="column" justify={"center"} paddingX={24} paddingY={24}>
-        <Badge
-          backgroundColor={"gray.300"}
-          colorScheme="gray"
-          fontSize="md"
-          fontWeight={600}
-          textColor="black"
-        >
-          Sumá con tu ayuda
-        </Badge>
-        <Text fontSize="4xl" fontWeight={800} textColor="black">
-          Historias de vida
-        </Text>
-        <Text fontSize="md" maxWidth="640" textAlign="center">
-          Parte de nuestra campaña de rescate se centra en compartir historias de vida, porque
-          muchas veces la mascota no se elige, simplemente se encuentran
-        </Text>
+    <Stack align="center" direction="column" justify={"center"} padding={{"base": 4, "md": 24}} width="full">
+      <Badge
+        backgroundColor={"gray.300"}
+        colorScheme="gray"
+        fontSize="md"
+        fontWeight={600}
+        textColor="black"
+      >
+        Sumá con tu ayuda
+      </Badge>
+      <Text fontSize="4xl" fontWeight={800} textColor="black" textAlign="center">
+        Historias de vida
+      </Text>
+      <Text fontSize="md" maxWidth="640" textAlign="center">
+        Parte de nuestra campaña de rescate se centra en compartir historias de vida, porque
+        muchas veces la mascota no se elige, simplemente se encuentran
+      </Text>
 
-        <Stack maxWidth="100%" paddingTop={50}>
-          <Carousel loop cols={3} gap={50} rows={1}>
-            {sliderImages.map((slide, idx) => {
-              return (
-                <Carousel.Item key={idx} width={50}>
-                  {slide.image ? (
-                    <Image alt="Perro" borderRadius={25} height="auto" src={slide.image} width="" />
-                  ) : (
-                    <Flex alignItems="center" height="100%">
-                      <Stack direction="column">
-                        <Text fontSize="4xl" fontWeight={800} marginBottom={5} textColor="black">
-                          {slide.title}
-                        </Text>
-                        <Text fontSize="md">{slide.text}</Text>
-                      </Stack>
-                    </Flex>
-                  )}
-                </Carousel.Item>
-              );
-            })}
-          </Carousel>
-        </Stack>
-
-        <Stack direction="row" paddingTop={50}>
-          <Button
-            _hover={{bg: "primary.500"}}
-            bg={"primary.500"}
-            color={"white"}
-            paddingX="10"
-            paddingY="4"
-            size="xs"
-            onClick={() => window.open("https://instagram.com/adopcanem", "_blank")}
-          >
-            Seguinos en Instagram
-          </Button>
-        </Stack>
+      <Stack width={{ base: "full", md: "container.md", lg: "container.lg", xl: "container.xl" }} paddingTop={{base: 10, md: 50}}>
+        <Carousel loop cols={3} gap={50} rows={1}>
+          {sliderImages.map((slide, idx) => {
+            return (
+              <Carousel.Item key={idx} width={40}>
+                {slide.image ? (
+                  <Image borderRadius={25} height="auto" src={slide.image} width="full" />
+                ) : (
+                  <Flex alignItems="center" height="100%">
+                    <Stack direction="column">
+                      <Text fontSize="4xl" fontWeight={800} marginBottom={5} textColor="black">
+                        {slide.title}
+                      </Text>
+                      <Text fontSize="md">{slide.text}</Text>
+                    </Stack>
+                  </Flex>
+                )}
+              </Carousel.Item>
+            );
+          })}
+        </Carousel>
       </Stack>
-    </Container>
+
+      <Stack direction="row" paddingTop={{base: 10, md: 50}}>
+        <Button
+          _hover={{bg: "primary.500"}}
+          bg={"primary.500"}
+          color={"white"}
+          paddingX="10"
+          paddingY="4"
+          size="xs"
+          onClick={() => window.open("https://instagram.com/adopcanem", "_blank")}
+        >
+          Seguinos en Instagram
+        </Button>
+      </Stack>
+    </Stack>
   );
 };
 
