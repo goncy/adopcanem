@@ -15,3 +15,18 @@ export const PET_PHOTOS: string[] = [
   "https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=717",
   "https://images.unsplash.com/photo-1591946559594-8c6d3b7391eb?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687",
 ];
+
+export const SCROLL_BUTTON_POSITION = {
+  BOTTOM: {
+    base: "40px",
+    md: "70px",
+    lg: "80px",
+    xl: "90px",
+  },
+  RIGHT: {
+    base: "40px",
+    md: "70px",
+    lg: "80px",
+    xl: "90px",
+  },
+};

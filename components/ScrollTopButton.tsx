@@ -2,21 +2,22 @@ import React, {useEffect, useState, useCallback} from "react";
 import {Button, VisuallyHidden} from "@chakra-ui/react";
 
 import {ArrowUp} from "components/icons";
+import {SCROLL_BUTTON_POSITION} from "lib/constants";
 
 interface Props {
   limit: number;
-  right?: number;
-  bottom?: number;
+  right?: number | string | object;
+  bottom?: number | string | object;
   translateY?: string;
   accessibilityContent?: string;
 }
 
-export const ScrollTopButton: React.FC<Props> = ({
+const ScrollTopButton: React.FC<Props> = ({
   limit,
-  right = 20,
-  bottom = 20,
+  right = SCROLL_BUTTON_POSITION.RIGHT,
+  bottom = SCROLL_BUTTON_POSITION.BOTTOM,
   translateY = "30px",
-  accessibilityContent = "Scroll to top",
+  accessibilityContent = "Volver al inicio",
 }) => {
   const [hasScrolled, setHasScrolled] = useState<boolean>(false);
 
@@ -29,7 +30,10 @@ export const ScrollTopButton: React.FC<Props> = ({
   }, [limit, hasScrolled]);
 
   const handleScrollTop = useCallback((): void => {
-    window.scrollTo(0, 0);
+    window.scroll({
+      top: 0,
+      behavior: "smooth",
+    });
   }, []);
 
   useEffect(() => {
@@ -42,6 +46,7 @@ export const ScrollTopButton: React.FC<Props> = ({
 
   return (
     <Button
+      _active={{backgroundColor: "#363636"}}
       _hover={{backgroundColor: "#363636"}}
       backgroundColor="#404040"
       bottom={bottom}
@@ -60,3 +65,5 @@ export const ScrollTopButton: React.FC<Props> = ({
     </Button>
   );
 };
+
+export default ScrollTopButton;
