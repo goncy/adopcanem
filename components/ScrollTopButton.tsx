@@ -16,7 +16,7 @@ const ScrollTopButton: React.FC<Props> = ({
   right = 20,
   bottom = 20,
   translateY = "30px",
-  accessibilityContent = "Scroll to top",
+  accessibilityContent = "Volver al inicio",
 }) => {
   const [hasScrolled, setHasScrolled] = useState<boolean>(false);
 
