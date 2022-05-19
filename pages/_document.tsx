@@ -12,7 +12,7 @@ export default function Document() {
           type="font/woff2"
         />
       </Head>
-      <body>
+      <body style={{width: "100%", margin: 0, padding: 0}}>
         <Main />
         <NextScript />
       </body>
