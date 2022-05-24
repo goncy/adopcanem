@@ -40,7 +40,16 @@ const Navbar: React.FC = () => {
   const {isOpen, onOpen, onClose} = useDisclosure();
 
   return (
-    <Box as="nav" boxShadow="2xl" height={20} width="full">
+    <Box
+      as="nav"
+      bg={"white"}
+      boxShadow="2xl"
+      height={20}
+      position={"sticky"}
+      top={0}
+      width="full"
+      zIndex={"modal"}
+    >
       <Container height="full" maxW="container.xl">
         <Flex alignItems="center" height="full" justifyContent="space-between">
           <Text color="primary.500" fontSize="3xl" fontWeight={900}>
