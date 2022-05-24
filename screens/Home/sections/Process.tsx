@@ -1,6 +1,8 @@
 import React from "react";
 import {Text, GridItem, Stack, Box, SimpleGrid} from "@chakra-ui/react";
 
+import Section from "components/section/Section";
+
 import ProcessSectionCard from "../../../components/cards/ProcessSectionCard";
 import {ProcessCardType} from "../../../types/adopcanem.types";
 
@@ -45,7 +47,7 @@ const Process: React.FC = () => {
   };
 
   return (
-    <Stack backgroundColor="#F8F3E3" px={10} py="100px">
+    <Section backgroundColor="#F8F3E3" hasDivider={false}>
       <Stack direction="column" spacing={10}>
         {/* Cabecera del bloque */}
         <Stack
@@ -60,7 +62,7 @@ const Process: React.FC = () => {
             <Box
               bg="#E5E0D2"
               borderRadius="30px"
-              fontSize={22}
+              fontSize={20}
               fontWeight="bold"
               p={2}
               textAlign="center"
@@ -68,12 +70,17 @@ const Process: React.FC = () => {
             >
               El proceso
             </Box>
-            <Text fontSize={["48px", null, null, "54px"]} fontWeight="black" pt={6}>
+            <Text
+              fontSize={["48px", null, null, "54px"]}
+              fontWeight={900}
+              lineHeight={1.125}
+              pt={6}
+            >
               Narices frias y corazones contentos
             </Text>
           </Stack>
           <Stack alignItems="center" justifyContent="center">
-            <Text fontSize="22px" fontWeight="bold">
+            <Text fontSize="20px" fontWeight="semibold">
               Al momento de adoptar asumís un acto de responsabilidad y compromiso por lo que es
               importante que estés capacitado para hacerlo.
             </Text>
@@ -82,7 +89,6 @@ const Process: React.FC = () => {
         {/* Imagenes */}
         <SimpleGrid
           columns={[1, 1, 2, 2, 4]}
-          // minChildWidth="300px"
           gap={[4, null, 4]}
           justifyItems="center"
           py={10}
@@ -100,7 +106,7 @@ const Process: React.FC = () => {
           ))}
         </SimpleGrid>
       </Stack>
-    </Stack>
+    </Section>
   );
 };
 

@@ -1,14 +1,15 @@
-import {Box, Grid, Text, GridItem, Container, useBreakpointValue} from "@chakra-ui/react";
+import {Box, Grid, Text, GridItem, useBreakpointValue} from "@chakra-ui/react";
 import React from "react";
+
+import Section from "components/section/Section";
 
 const FamilySection: React.FC = () => {
   const display = useBreakpointValue({base: "none", md: "block"});
   const colspan = useBreakpointValue({base: 1, md: 2});
 
   return (
-    <Container maxWidth="container.xl">
+    <Section backgroundColor="white" dividerColor="#E5E5E5">
       <Grid
-        backgroundColor="white"
         gap={3}
         overflow="hidden"
         position="relative"
@@ -109,7 +110,7 @@ const FamilySection: React.FC = () => {
           colStart={5}
         />
       </Grid>
-    </Container>
+    </Section>
   );
 };
 

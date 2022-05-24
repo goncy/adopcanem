@@ -14,11 +14,9 @@ const NavbarLink: React.FC<NavbarLinkProps> = (props) => {
 
   return (
     <Link href={href}>
-      <a>
-        <Text as="span" cursor="pointer" fontWeight={600}>
-          {label}
-        </Text>
-      </a>
+      <Text as="span" cursor="pointer" fontWeight={600}>
+        {label}
+      </Text>
     </Link>
   );
 };

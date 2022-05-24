@@ -43,7 +43,7 @@ const Section: React.FC<SectionProps> = (props) => {
         <Box
           bgGradient={hasGradientEffect ? "linear(to-r, blackAlpha.600, transparent)" : "none"}
           paddingX={{base: 4, md: 8}}
-          paddingY={200}
+          paddingY={[20, 30, 40, 60, 150]}
         >
           <Container maxWidth="container.xl">
             {children}

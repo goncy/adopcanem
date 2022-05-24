@@ -1,5 +1,5 @@
-import {Box} from "@chakra-ui/react";
 import React from "react";
+import {Box} from "@chakra-ui/react";
 
 interface SectionDividerProps {
   /** Color to display in the divider, defaults to white. */

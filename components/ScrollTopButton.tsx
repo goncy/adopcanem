@@ -46,9 +46,7 @@ const ScrollTopButton: React.FC<Props> = ({
 
   return (
     <Button
-      _active={{backgroundColor: "#363636"}}
-      _hover={{backgroundColor: "#363636"}}
-      backgroundColor="#404040"
+      backgroundColor="primary.500"
       bottom={bottom}
       height={68}
       opacity={hasScrolled ? "1" : "0"}

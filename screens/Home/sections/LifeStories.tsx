@@ -1,7 +1,9 @@
 import React from "react";
-import {Stack, Button, Badge, Text, Image, Flex, Container} from "@chakra-ui/react";
+import {Stack, Button, Badge, Text, Image, Flex, VStack} from "@chakra-ui/react";
 // @ts-ignore
 import Carousel from "react-grid-carousel";
+
+import Section from "components/section/Section";
 
 export const LifeStories: React.FC = () => {
   //replace with real images and text
@@ -39,61 +41,68 @@ export const LifeStories: React.FC = () => {
   ];
 
   return (
-    <Stack align="center" direction="column" justify={"center"} padding={{"base": 4, "md": 24}} width="full">
-      <Badge
-        backgroundColor={"gray.300"}
-        colorScheme="gray"
-        fontSize="md"
-        fontWeight={600}
-        textColor="black"
-      >
-        Sumá con tu ayuda
-      </Badge>
-      <Text fontSize="4xl" fontWeight={800} textColor="black" textAlign="center">
-        Historias de vida
-      </Text>
-      <Text fontSize="md" maxWidth="640" textAlign="center">
-        Parte de nuestra campaña de rescate se centra en compartir historias de vida, porque
-        muchas veces la mascota no se elige, simplemente se encuentran
-      </Text>
+    <Section backgroundColor="#E5E5E5" hasDivider={false}>
+      {/* Main stack */}
+      <VStack py={4} spacing={4} width="full">
+        <Badge colorScheme="gray" fontSize="lg" fontWeight={600} textColor="black">
+          Sumá con tu ayuda
+        </Badge>
+        <Text fontSize="5xl" fontWeight={800} textAlign="center" textColor="black">
+          Historias de vida
+        </Text>
+        <Text maxWidth="640" textAlign="center">
+          Parte de nuestra campaña de rescate se centra en compartir historias de vida, porque
+          muchas veces la mascota no se elige, simplemente se encuentran
+        </Text>
 
-      <Stack width={{ base: "full", md: "container.md", lg: "container.lg", xl: "container.xl" }} paddingTop={{base: 10, md: 50}}>
-        <Carousel loop cols={3} gap={50} rows={1}>
-          {sliderImages.map((slide, idx) => {
-            return (
-              <Carousel.Item key={idx} width={40}>
-                {slide.image ? (
-                  <Image borderRadius={25} height="auto" src={slide.image} width="full" />
-                ) : (
-                  <Flex alignItems="center" height="100%">
-                    <Stack direction="column">
-                      <Text fontSize="4xl" fontWeight={800} marginBottom={5} textColor="black">
-                        {slide.title}
-                      </Text>
-                      <Text fontSize="md">{slide.text}</Text>
-                    </Stack>
-                  </Flex>
-                )}
-              </Carousel.Item>
-            );
-          })}
-        </Carousel>
-      </Stack>
-
-      <Stack direction="row" paddingTop={{base: 10, md: 50}}>
-        <Button
-          _hover={{bg: "primary.500"}}
-          bg={"primary.500"}
-          color={"white"}
-          paddingX="10"
-          paddingY="4"
-          size="xs"
-          onClick={() => window.open("https://instagram.com/adopcanem", "_blank")}
+        <Stack
+          paddingTop={{base: 10, md: 50}}
+          width={{
+            base: "full",
+            md: "container.md",
+            lg: "container.lg",
+            xl: "container.xl",
+          }}
         >
-          Seguinos en Instagram
-        </Button>
-      </Stack>
-    </Stack>
+          <Carousel loop cols={3} gap={50} rows={1}>
+            {sliderImages.map((slide, idx) => {
+              return (
+                <Carousel.Item key={idx} width={40}>
+                  {slide.image ? (
+                    <Image
+                      alt="Slide Photo"
+                      borderRadius={25}
+                      height="auto"
+                      src={slide.image}
+                      width="full"
+                    />
+                  ) : (
+                    <Flex alignItems="center" height="100%">
+                      <Stack direction="column">
+                        <Text
+                          fontSize="4xl"
+                          fontWeight={800}
+                          marginBottom={2}
+                          textAlign="center"
+                          textColor="black"
+                        >
+                          {slide.title}
+                        </Text>
+                        <Text>{slide.text}</Text>
+                      </Stack>
+                    </Flex>
+                  )}
+                </Carousel.Item>
+              );
+            })}
+          </Carousel>
+        </Stack>
+
+        <Stack direction="row" paddingTop={{base: 10, md: 50}}>
+          <Button size="lg">Seguinos en Instagram</Button>
+        </Stack>
+      </VStack>
+    </Section>
   );
 };
 
