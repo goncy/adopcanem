@@ -18,12 +18,12 @@ export const MeetYourBuddy: React.FC = () => {
             overflowY={["hidden"]}
             pt="32"
           >
-            <MeetColumn end={3} position={["0", "-100px"]} start={0} />
+            <MeetColumn end={3} position={["0", "-60px"]} start={0} />
             <MeetColumn end={6} position={["100px", "0"]} start={3} />
             <MeetColumn end={9} position={["0", "100px"]} start={6} />
             <MeetColumn end={12} position="150px" start={9} />
             <MeetColumn end={15} position={["100px", "0"]} start={12} />
-            <MeetColumn end={18} position={["0", "-100px"]} start={15} />
+            <MeetColumn end={18} position={["0", "-60px"]} start={15} />
           </Grid>
           <Stack align="center" bgColor="white">
             <Box

@@ -1,14 +1,8 @@
 import React from "react";
-import {
-  Text,
-  GridItem,
-  Stack,
-  Box,
-  SimpleGrid,
-} from "@chakra-ui/react";
+import {Text, GridItem, Stack, Box, SimpleGrid} from "@chakra-ui/react";
 
 import ProcessSectionCard from "../../../components/cards/ProcessSectionCard";
-import { ProcessCardType } from "../../../types/adopcanem.types";
+import {ProcessCardType} from "../../../types/adopcanem.types";
 
 const CARDS: ProcessCardType[] = [
   {
@@ -38,73 +32,68 @@ const CARDS: ProcessCardType[] = [
 ];
 
 const Process: React.FC = () => {
-
-
   const generateTopOffset = (index: number): string => {
     let offset = "0px";
+
     if (index % 2 === 0) {
       offset = "-30px";
     } else {
       offset = "30px";
     }
+
     return offset;
   };
 
   return (
-    <Stack backgroundColor="#F8F3E3" py="100px" px={10}>
+    <Stack backgroundColor="#F8F3E3" px={10} py="100px">
       <Stack direction="column" spacing={10}>
         {/* Cabecera del bloque */}
         <Stack
+          alignContent={["center", null, null, "space-between"]}
           direction={["column", null, null, "row"]}
           display="flex"
           justifyContent={["center", null, null, "space-between"]}
-          alignContent={["center", null, null, "space-between"]}
-          spacing={10}
           px={[2, 4, 4, 4, 10]}
+          spacing={10}
         >
           <Stack>
             <Box
               bg="#E5E0D2"
               borderRadius="30px"
-              w="200px"
               fontSize={22}
-              textAlign="center"
               fontWeight="bold"
               p={2}
+              textAlign="center"
+              w="200px"
             >
               El proceso
             </Box>
-            <Text
-              fontSize={["48px", null, null, "54px"]}
-              fontWeight="black"
-              pt={6}
-            >
+            <Text fontSize={["48px", null, null, "54px"]} fontWeight="black" pt={6}>
               Narices frias y corazones contentos
             </Text>
           </Stack>
-          <Stack justifyContent="center" alignItems="center">
+          <Stack alignItems="center" justifyContent="center">
             <Text fontSize="22px" fontWeight="bold">
-              Al momento de adoptar asumís un acto de responsabilidad y
-              compromiso por lo que es importante que estés capacitado para
-              hacerlo.
+              Al momento de adoptar asumís un acto de responsabilidad y compromiso por lo que es
+              importante que estés capacitado para hacerlo.
             </Text>
           </Stack>
         </Stack>
         {/* Imagenes */}
         <SimpleGrid
-          templateRows="auto"
+          columns={[1, 1, 2, 2, 4]}
           // minChildWidth="300px"
-          columns={[1,1,2,2,4]}
           gap={[4, null, 4]}
-          py={10}
           justifyItems="center"
+          py={10}
+          templateRows="auto"
         >
           {CARDS.map((card, index) => (
-            <GridItem>
+            <GridItem key={index}>
               <ProcessSectionCard
-                title={card.title}
                 description={card.description}
                 thumbnail={card.thumbnail}
+                title={card.title}
                 topOffset={generateTopOffset(index)}
               />
             </GridItem>
