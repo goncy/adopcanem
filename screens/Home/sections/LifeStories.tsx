@@ -1,7 +1,8 @@
 import React from "react";
-import {Stack, Button, Badge, Text, Image, Flex, VStack} from "@chakra-ui/react";
+import {Stack, Badge, Text, Image, Flex, VStack, Button, Link} from "@chakra-ui/react";
 // @ts-ignore
 import Carousel from "react-grid-carousel";
+import {FaInstagram} from "react-icons/fa";
 
 import Section from "components/section/Section";
 
@@ -99,7 +100,17 @@ export const LifeStories: React.FC = () => {
         </Stack>
 
         <Stack direction="row" paddingTop={{base: 10, md: 50}}>
-          <Button size="lg">Seguinos en Instagram</Button>
+          <Link
+            isExternal
+            _hover={{textDecoration: "none"}}
+            href="https://www.instagram.com/adopcanem/"
+            rel="noreferrer"
+          >
+            <Button gap={3} size="lg">
+              <FaInstagram size={20} />
+              Seguinos en Instagram
+            </Button>
+          </Link>
         </Stack>
       </VStack>
     </Section>

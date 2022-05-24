@@ -1,5 +1,5 @@
 import {Link, Stack, Text} from "@chakra-ui/react";
-import {FiFacebook, FiLinkedin, FiInstagram} from "react-icons/fi";
+import {FiFacebook, FiInstagram} from "react-icons/fi";
 import React from "react";
 
 import FooterLink from "./FooterLink";
@@ -36,9 +36,6 @@ const Footer: React.FC = () => {
           <FooterLink href="/">Hacé tu donación</FooterLink>
         </Stack>
         <Stack direction="row" gap="10px" justifyContent="end" width="200px">
-          <Link href="#">
-            <FiLinkedin size={24} />
-          </Link>
           <Link isExternal href="https://www.facebook.com/Adopcanem">
             <FiFacebook size={24} />
           </Link>

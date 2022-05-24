@@ -14,6 +14,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import {FaBars, FaWindowClose} from "react-icons/fa";
+import Link from "next/link";
 
 import NavbarLink, {NavbarLinkProps} from "./NavbarLink";
 
@@ -52,9 +53,13 @@ const Navbar: React.FC = () => {
     >
       <Container height="full" maxW="container.xl">
         <Flex alignItems="center" height="full" justifyContent="space-between">
-          <Text color="primary.500" fontSize="3xl" fontWeight={900}>
-            adopcanem
-          </Text>
+          <Link href="/">
+            <a>
+              <Text color="primary.500" fontSize="3xl" fontWeight={900}>
+                adopcanem
+              </Text>
+            </a>
+          </Link>
           <Stack
             direction="row"
             display={{base: "none", lg: "flex"}}
