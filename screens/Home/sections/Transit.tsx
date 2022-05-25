@@ -8,7 +8,7 @@ const Transit: React.FC = () => {
       backgroundIsImage
       backgroundColor="gray.200"
       backgroundImage="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469"
-      dividerColor="#E5E5E5"
+      dividerColor="white"
     >
       <Stack
         alignItems="center"

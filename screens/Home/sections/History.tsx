@@ -2,11 +2,13 @@ import React from "react";
 import {Button, Badge, Text, VStack, Box, HStack, Grid, GridItem} from "@chakra-ui/react";
 import Link from "next/link";
 
+import {ArrowDownLeft, ArrowDownRight, HumanAndDogPulling, Paws} from "components/icons";
+
 import Section from "../../../components/section/Section";
 
 const History: React.FC = () => {
   return (
-    <Section backgroundColor="#E5E5E5" hasDivider={false}>
+    <Section backgroundColor="white" hasDivider={false}>
       {/* Main stack */}
       <VStack py={4} spacing={10} width="full">
         {/* Top */}
@@ -29,11 +31,13 @@ const History: React.FC = () => {
             comprar alimento.
           </Text>
         </VStack>
-
+        <Box position="absolute" right={"-200px"} top={"-400px"}>
+          <Paws />
+        </Box>
         {/* Timeline */}
         <Grid gap={2} templateColumns={"repeat(3, 1fr)"} width="full">
           <GridItem>
-            <VStack h={"full"} justify={"center"}>
+            <VStack h={"full"} justify={"center"} position="relative">
               <Text
                 fontSize={{base: "sm", sm: "md"}}
                 fontWeight={800}
@@ -44,6 +48,9 @@ const History: React.FC = () => {
                 Comienza la organización <br />
                 2017
               </Text>
+              <Box bottom={"-30px"} position="absolute">
+                <ArrowDownLeft />
+              </Box>
             </VStack>
           </GridItem>
           <GridItem>
@@ -68,7 +75,7 @@ const History: React.FC = () => {
             </Text>
           </GridItem>
           <GridItem>
-            <VStack h={"full"} justify={"center"}>
+            <VStack h={"full"} justify={"center"} position="relative">
               <Text
                 fontSize={{base: "sm", sm: "md"}}
                 fontWeight={800}
@@ -79,6 +86,9 @@ const History: React.FC = () => {
                 <br />
                 2022
               </Text>
+              <Box bottom={"-30px"} position="absolute">
+                <ArrowDownRight />
+              </Box>
             </VStack>
           </GridItem>
           <GridItem colSpan={3}>
@@ -106,10 +116,15 @@ const History: React.FC = () => {
                   />
                 </HStack>
               </Box>
+              <Box left={"50%"} position="absolute">
+                <HumanAndDogPulling />
+              </Box>
             </VStack>
           </GridItem>
         </Grid>
-
+        <Box bottom={"-200px"} left={0} position="absolute">
+          <Paws />
+        </Box>
         {/* Bottom */}
         <VStack paddingTop={50} spacing={6} width="full">
           <Button paddingX={12} size="lg">
