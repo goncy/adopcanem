@@ -68,7 +68,7 @@ const LayoutHead: React.FC<LayoutHeadProps> = (props) => {
       <meta content={imageSizes[0].toString()} property="og:image:width" />
       <meta content={imageSizes[1].toString()} property="og:image:height" />
       <meta content={title} property="og:image:alt" />
-      <meta content="en" property="og:locale" />
+      <meta content="es" property="og:locale" />
       <meta content="website" property="og:type" />
       <meta content="Adopcanem" property="og:site_name" />
       <meta content={description} property="og:description" />
