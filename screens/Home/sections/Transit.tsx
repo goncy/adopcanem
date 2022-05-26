@@ -1,4 +1,4 @@
-import {Badge, Button, Stack, Text} from "@chakra-ui/react";
+import {Badge, Button, Stack, Text, Link} from "@chakra-ui/react";
 
 import Section from "../../../components/section/Section";
 
@@ -33,9 +33,16 @@ const Transit: React.FC = () => {
             hogar de tránsito
           </Text>
         </Text>
-        <Button colorScheme="primary" size="lg">
-          Completá el formulario
-        </Button>
+        <Link
+          isExternal
+          _hover={{textDecoration: "none"}}
+          href="https://docs.google.com/forms/d/e/1FAIpQLSf197Ctn6rxvqPUrFH1gqfsMf5JfotGbHnENR2IRbTqNI7-rA/viewform"
+          rel="noreferrer"
+        >
+          <Button colorScheme="primary" size="lg">
+            Completá el formulario
+          </Button>
+        </Link>
       </Stack>
     </Section>
   );
