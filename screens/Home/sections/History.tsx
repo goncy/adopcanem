@@ -31,6 +31,26 @@ const History: React.FC = () => {
             comprar alimento.
           </Text>
         </VStack>
+        <Box
+          backgroundColor="rgba(253, 177, 69, 0.4)"
+          borderRadius="50%"
+          filter="blur(5px)"
+          height="50px"
+          left={"150px"}
+          position="absolute"
+          top={"40px"}
+          width="50px"
+        />
+        <Box
+          backgroundColor="rgba(253, 177, 69, 0.4)"
+          borderRadius="50%"
+          filter="blur(8px)"
+          height="300px"
+          left={"-150px"}
+          position="absolute"
+          top={"40px"}
+          width="300px"
+        />
         <Box position="absolute" right={"-200px"} top={"-400px"}>
           <Paws />
         </Box>
@@ -122,6 +142,26 @@ const History: React.FC = () => {
             </VStack>
           </GridItem>
         </Grid>
+        <Box
+          backgroundColor="rgba(253, 177, 69, 0.4)"
+          borderRadius="50%"
+          bottom={"380px"}
+          filter="blur(5px)"
+          height="50px"
+          position="absolute"
+          right={"100px"}
+          width="50px"
+        />
+        <Box
+          backgroundColor="rgba(253, 177, 69, 0.4)"
+          borderRadius="50%"
+          bottom={"50px"}
+          filter="blur(8px)"
+          height="300px"
+          position="absolute"
+          right={"-150px"}
+          width="300px"
+        />
         <Box bottom={"-200px"} left={0} position="absolute">
           <Paws />
         </Box>
