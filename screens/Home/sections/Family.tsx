@@ -8,12 +8,12 @@ const FamilySection: React.FC = () => {
   const colspan = useBreakpointValue({base: 1, md: 2});
 
   return (
-    <Section backgroundColor="white" dividerColor="#E5E5E5">
+    <Section backgroundColor="white" dividerColor="#E5E5E5" hasPadding={false}>
       <Grid
         gap={3}
         overflow="hidden"
+        pb={[5, 60]}
         position="relative"
-        py={[5, 10]}
         templateColumns={{base: "0 repeat(4, 1fr) 0", md: "repeat(6, 1fr)"}}
         templateRows="repeat(3, 1fr)"
       >

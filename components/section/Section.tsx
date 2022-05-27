@@ -17,6 +17,8 @@ interface SectionProps {
   dividerColor?: string;
   /** Wether to add or not a suttle background gradient effect. */
   hasGradientEffect?: boolean;
+  /** Wether section has default padding or not. */
+  hasPadding?: boolean;
 }
 
 const Section: React.FC<SectionProps> = (props) => {
@@ -27,6 +29,7 @@ const Section: React.FC<SectionProps> = (props) => {
     backgroundIsImage = false,
     backgroundImage = "https://www.petassure.com/petassure/file-streams/page/DKhmRtazcw1FPjHr00Myg4caring-for-pets-teaches-children-responsibility.jpg.jpg",
     hasGradientEffect = false,
+    hasPadding = true,
     children,
   } = props;
 
@@ -43,7 +46,7 @@ const Section: React.FC<SectionProps> = (props) => {
         <Box
           bgGradient={hasGradientEffect ? "linear(to-r, blackAlpha.600, transparent)" : "none"}
           paddingX={{base: 4, md: 8}}
-          paddingY={[20, 30, 40, 60, 150]}
+          paddingY={hasPadding ? [20, 30, 40, 60, 150] : 0}
         >
           <Container maxWidth="container.xl">
             {children}
