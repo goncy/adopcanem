@@ -4,8 +4,8 @@ import React from "react";
 import Section from "components/section/Section";
 
 const FamilySection: React.FC = () => {
-  const display = useBreakpointValue({base: "none", md: "block"});
-  const colspan = useBreakpointValue({base: 1, md: 2});
+  const display = useBreakpointValue({base: "none"});
+  const colspan = useBreakpointValue({base: 1});
 
   return (
     <Section backgroundColor="white" dividerColor="#E5E5E5" hasPadding={false}>
@@ -14,7 +14,7 @@ const FamilySection: React.FC = () => {
         overflow="hidden"
         pb={[5, 60]}
         position="relative"
-        templateColumns={{base: "0 repeat(4, 1fr) 0", md: "repeat(6, 1fr)"}}
+        templateColumns={{base: "0 repeat(4, 1fr) 0"}}
         templateRows="repeat(3, 1fr)"
       >
         <GridItem
@@ -48,7 +48,7 @@ const FamilySection: React.FC = () => {
             display="flex"
             h="100%"
             justifyContent="center"
-            minHeight={80}
+            minHeight={{base: "lg", md: "xl"}}
             padding={[2, 5, 10]}
           >
             <Text align="center" color="white" fontSize={["2xl", null, "4xl"]} fontWeight={700}>
@@ -78,7 +78,6 @@ const FamilySection: React.FC = () => {
           borderRadius="2xl"
           colEnd={3}
           colSpan={colspan}
-          // display={ display }
         />
         <GridItem
           backgroundImage="url(https://www.hola.com/imagenes/mascotas/20211014197674/educar-ninos-perros-convivencia-sin-problema-dn/1-6-902/como-educar-perros-ninos-convivencia-sin-problemas-t.jpg)"

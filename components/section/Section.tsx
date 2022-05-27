@@ -48,7 +48,7 @@ const Section: React.FC<SectionProps> = (props) => {
           paddingX={{base: 4, md: 8}}
           paddingY={hasPadding ? [20, 30, 40, 60, 150] : 0}
         >
-          <Container maxWidth="container.xl">
+          <Container maxWidth={hasPadding ? "container.xl" : "auto"}>
             {children}
             {hasDivider && <SectionDivider backgroundColor={dividerColor} />}
           </Container>
