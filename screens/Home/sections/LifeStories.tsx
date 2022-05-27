@@ -77,7 +77,13 @@ export const LifeStories: React.FC = () => {
                       width="full"
                     />
                   ) : (
-                    <Flex alignItems="center" height="100%">
+                    <Flex
+                      alignItems="center"
+                      backgroundColor="white"
+                      borderRadius={25}
+                      height="100%"
+                      p={8}
+                    >
                       <Stack direction="column">
                         <Text
                           fontSize="4xl"
