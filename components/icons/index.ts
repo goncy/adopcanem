@@ -7,3 +7,5 @@ export * from "./Paws";
 export * from "./ArrowDownLeft";
 
 export * from "./ArrowDownRight";
+
+export * from "./HeartHeader";

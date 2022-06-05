@@ -1,13 +1,21 @@
 import React from "react";
-import {Button, Text, Stack, Box} from "@chakra-ui/react";
+import { Button, Text, Stack, Box } from "@chakra-ui/react";
 
 import Section from "../../../components/section/Section";
+import { HeartHeader } from "components/icons";
 
 interface Props {}
 
 const Hero: React.FC<Props> = () => {
   return (
     <Section backgroundIsImage backgroundColor="white" dividerColor="white">
+      <Box
+        top={2}
+        right={["50%", "40%"]}
+        position="absolute"
+      >
+        <HeartHeader />
+      </Box>
       <Stack align={"flex-start"} marginLeft={[10, 20, 30]} maxWidth={489} py={100} spacing={2}>
         <Text
           color={"white"}
